@@ -1,0 +1,51 @@
+body{
+margin:0;
+padding:0;
+font-family:sans-serif;
+background:url("https://www.awakenthegreatnesswithin.com/wp-content/uploads/2017/04/TQ-1.jpg") no-repeat;
+background-size:cover;
+width : 100%;
+height :715px;
+}
+.button {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border:2px solid #696969;
+   border-radius: 50px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {background-color:#A569BD ;
+
+position: absolute;
+  left: 1200px;
+  top: 9px;
+} 
+.button1:hover
+{
+width:110px;
+transition-duration: 0.5s;
+background-color:#6C3483;
+}
+.button2 {background-color: #A569BD;
+
+position: absolute;
+  left: 1050px;
+  top: 9px;
+} 
+.button2:hover
+{
+width:120px;
+transition-duration: 0.5s;
+background-color:#6C3483;
+}
+.marquee
+{color:white;
+font-size:60px;
+font-style:Geneva;
+}
