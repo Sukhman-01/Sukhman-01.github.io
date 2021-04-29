@@ -28,7 +28,8 @@ position: absolute;
 } 
 .button1:hover
 {
-width:110px;
+width:65px;
+color: white;
 transition-duration: 0.5s;
 background-color:#6C3483;
 }
@@ -40,7 +41,8 @@ position: absolute;
 } 
 .button2:hover
 {
-width:120px;
+color: white;
+width:65px;
 transition-duration: 0.5s;
 background-color:#6C3483;
 }
