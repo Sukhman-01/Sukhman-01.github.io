@@ -1,73 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<title>MARCH2021</title>
-</head>
-<link rel="stylesheet" href="main calender.css">
-<body>
+  <head>
+    <title>Calendar</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Merriweather+Sans&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main calender.css" />
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+        display: grid;
+        height: auto;
+        font-family: "Comfortaa", cursive;
+        overflow: visible;
+      }
 
-<h1 style="text-align:center;border:2px solid black;">Interactive calender</h1>
-<table class="center">
-<a href="feb2021.html" class="previous round center">&#8249;</a><!--previous-->
-<caption>March 2021</caption>
-<a href="interactive calander.html" class="previous round center" style="float:right;">&#8250;</a><!--next-->
-<thead>
-<th>Mon</th>
-<th>Tue</th>
-<th>Wed</th>
-<th>Thur</th>
-<th>Fri</th>
-<th>Sat</th>
-<th class="holiday">Sun</th>
-</thead>
-<tbody>
-<tr>
-<td class="oldday">29</td>
-<td class="oldday">30</td>
-<td class="oldday">31</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td class="holiday">4</td>
-</tr>
-<tr>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
-<td class="holiday">11</td>
-</tr>
-<tr>
-<td>12</td>
-<td>13</td>
-<td>14</td>
-<td>15</td>
-<td>16</td>
-<td>17</td>
-<td class="holiday">18</td>
-</tr>
-<tr>
-<td>19</td>
-<td>20</td>
-<td>21</td>
-<td>22</td>
-<td>23</td>
-<td>24</td>
-<td class="holiday">25</td>
-</tr>
-<tr>
-<td>26</td>
-<td>27</td>
-<td>28</td>
-<td>29</td>
-<td>30</td>
-<td class="newday">1</td>
-<td class="newday" class="holiday" >2</td>
-</tr>
-</tbody>
-</table>
+      header {
+        /* background: #1DC1FF; */
+        /* background-color: #2ecc71; */
+        background: #40e0d0;
+        /* padding: 2px; */
+        grid-column: 2 / 4;
+        height: 120px;
+      }
+      .head {
+        height: 100%;
+        margin-right: 15px;
+        font-size: 120px;
+        font-weight: 900;
+        text-align: right;
+        margin-top: -35px;
+        font-family: "Kanit", sans-serif;
+        color: #008080;
+        text-shadow: 8px 3px 5px #f2fcf9;
+      }
 
-</body>
+      .title {
+        grid-column: 2/3;
+        /* background: #1dc1ff; */
+        /* margin: auto; */
+        height: 50px;
+        display: grid;
+        grid-template-columns: auto 5fr auto;
+        /* border: 2px solid black;*/
+      }
+      .month {
+        /* font-size: large; */
+        text-align: center;
+        font-size: 40px;
+        margin-top: 5px;
+        /* color: white; */
+        color: teal;
+        /* font-weight: 400; */
+      }
+
+      .left-sidebar {
+        /* background: #A38FE6; */
+        background-color: teal;
+        grid-column: 1 / 2;
+        grid-row: 1/6;
+        height: 100%;
+        width: auto;
+        text-align: justify;
+        padding: 10px;
+      }
+
+      .main {
+        /* background: coral; */
+        grid-column: 2 / 3;
+        /* background-image: url("spring.jpg"); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: auto; */
+        /* background-color:wheat; */
+        /* background-color:white; */
+      }
+
+      .right-sidebar {
+        /* background: yellow; */
+        /* background: #A38FE6; */
+        background-color: teal;
+        grid-column: 3 / 4;
+        grid-row: 2/4;
+        padding: 10px;
+      }
+      .r-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        /* padding: 10px; */
+        row-gap: 12px;
+      }
+      .right {
+        background-color: white;
+        border-radius: 5px;
+        width: 70px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 3px 3px turquoise;
+      }
+
+      footer {
+        /* background: #67D6C2; */
+        background-color: teal;
+        /* padding: 10px; */
+        text-align: center;
+        color: white;
+        grid-column: 2 / 4;
+        /* align-self: end; */
+        /* border-radius: 10px; */
+        height: 100%;
+        padding: 10px;
+      }
+
+      .main-date {
+        /* color: #004AAD; */
+        color: white;
+        font-size: 120px;
+        font-weight: 900;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+      }
+      .main-day {
+        font-weight: 500;
+        font-size: 30px;
+        color: white;
+        width: 50%;
+        margin: 0px auto;
+        position: relative;
+        text-align: center;
+      }
+      .time {
+        color: white;
+        text-align: center;
+      }
+      .news {
+        margin: 10px;
+        font-size: large;
+        color: white;
+      }
+      #r6 {
+        color: red;
+        grid-row: 6/7;
+      }
+      #r5 {
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="head">CALENDAR</div>
+    </header>
+    <div class="title">
+      <div>
+        <a title="Previous Month" href="feb2021.html" class="round"><</a>
+        <!--previous  &#8249;  -->
+      </div>
+      <div class="month">MARCH 2021</div>
+      <!--current month name-->
+      <div>
+        <a title="Next Month" href="april2021.html" class="round">></a
+        ><!--next  &#8250;  -->
+      </div>
+    </div>
+
+    <div class="left-sidebar">
+      <div class="main-date">30</div>
+      <div class="main-day">FRIDAY</div>
+      <div class="time"><time>03:30 PM</time></div>
+
+      <hr style="margin: 10px; border: 2px solid white" />
+      <div class="news">News of the Day:</div>
+
+      <div>
+        <a
+          class="twitter-timeline"
+          data-width="280"
+          data-height="400"
+          href="https://twitter.com/ANI?ref_src=twsrc%5Etfw"
+          >News of the Day by ANI</a
+        >
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </div>
+    </div>
+    <div class="main">
+      <div>
+        <table class="center">
+          <thead>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THUR</th>
+            <th>FRI</th>
+            <th>SAT</th>
+            <th>SUN</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="eventpage.html">1</a></td>
+              <td><a href="eventpage.html">2</a></td>
+              <td><a href="eventpage.html">3</a></td>
+              <td><a href="eventpage.html">4</a></td>
+              <td><a href="eventpage.html">5</a></td>
+              <td><a href="eventpage.html">6</a></td>
+              <td class="holiday"><a href="eventpage.html">7</a></td>
+            </tr>
+            <tr>
+              <td class="holiday"><a href="eventpage.html" title="Maharishi Dayanand Saraswati Jayanti">8</a></td>
+              <td><a href="eventpage.html">9</a></td>
+              <td><a href="eventpage.html">10</a></td>
+              <td class="holiday"><a href="eventpage.html" title="Maha Shivaratri/Shivaratri">11</a></td>
+              <td><a href="eventpage.html">12</a></td>
+              <td><a href="eventpage.html">13</a></td>
+              <td class="holiday"><a href="eventpage.html">14</a></td>
+            </tr>
+            <tr>
+              <td><a href="eventpage.html">15</a></td>
+              <td><a href="eventpage.html">16</a></td>
+              <td><a href="eventpage.html">17</a></td>
+              <td><a href="eventpage.html">18</a></td>
+              <td><a href="eventpage.html">19</a></td>
+              <td><a href="eventpage.html">20</a></td>
+              <td class="holiday"><a href="eventpage.html">21</a></td>
+            </tr>
+            <tr>
+              <td><a href="eventpage.html">22</a></td>
+              <td><a href="eventpage.html">23</a></td>
+              <td><a href="eventpage.html">24</a></td>
+              <td><a href="eventpage.html">25</a></td>
+              <td><a href="eventpage.html">26</a></td>
+              <td><a href="eventpage.html">27</a></td>
+              <td class="holiday"><a href="eventpage.html" title="Holika Dahana">28</a></td>
+            </tr>
+            <tr>
+              <td class="holiday"><a href="eventpage.html" title="Holi">29</a></td>
+              <td><a href="eventpage.html">30</a></td>
+              <td><a href="eventpage.html">31</a></td>
+              <td class="newday"><a href="eventpage.html">1</a></td>
+              <td class="holiday, newday"><a href="eventpage.html" title="Good Friday">2</a></td>
+              <td class="newday"><a href="eventpage.html">3</a></td>
+              <td class="holiday, newday"><a href="eventpage.html" title="Easter Day">4</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="right-sidebar">
+      <div class="r-container">
+        <div id="r1">
+          <a href="april2021.html" class="right">Today</a>
+        </div>
+        <div id="r2">
+          <a href="eventpage.html" class="right">New Event</a>
+        </div>
+        <div id="r3">
+          <a href="https://news.google.co.in" target="_blank" class="right"
+            >News</a
+          >
+        </div>
+        <div id="r4">
+          <a href="holidays.html" target="_blank" class="right"
+            >List of Holidays</a
+          >
+        </div>
+        <div id="r5"></div>
+        <div id="r6">
+          <a href="index.html" class="right">Log out</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <script
+          src="https://wordsmith.org/words/quote.js"
+          type="text/javascript"
+        ></script>
+      </div>
+    </footer>
+  </body>
 </html>
